@@ -53,7 +53,6 @@ void solve() {
 
 int main() {
 	cin >> n >> m;
-
 	int a, b;
 	for (int i = 0; i < m; i++) {
 		cin >> a >> b;
