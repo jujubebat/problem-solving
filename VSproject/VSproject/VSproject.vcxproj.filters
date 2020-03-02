@@ -21,8 +21,5 @@
     <ClCompile Include="14890경사로.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="9093단어 뒤집기.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
