@@ -1,13 +1,3 @@
-/*
-파이프 이동함수
--가로
--세로
--대각
--벽만나는 경우 고려
-
-dfs로 재귀하다가 n-1, n-1 만나면 카운트
-*/
-
 #include<iostream>
 using namespace std;
 
@@ -36,8 +26,6 @@ bool isWall(int x, int y, int d) {
 }
 
 void dfs(pos head) {// 파이프 이동함수
-	//printf("head.x = %d,  head.y = %d dir = %d\n", head.x, head.y, dir);
-
 	if (head.x == n - 1 && head.y == n - 1) {
 		res++;
 		return;
@@ -90,3 +78,13 @@ int main() {
 	printf("%d", res);
 	return 0;
 }
+
+/*
+파이프 이동함수
+-가로
+-세로
+-대각
+-벽만나는 경우 고려
+
+dfs로 재귀하다가 n-1, n-1 만나면 카운트
+*/
