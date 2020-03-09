@@ -24,10 +24,10 @@
     <ClCompile Include="2629양팔저울.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2529부등호.cpp">
+    <ClCompile Include="1454직사각형으로 나누기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1454직사각형으로 나누기.cpp">
+    <ClCompile Include="2529부등호.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
