@@ -102,9 +102,6 @@ void makeMapAndCheck(int d1, int d2) {
 			check[i][j] = 4;
 		}
 	}
-	
-
-
 
 	//5번
 	check[x][y] = 5; // /
@@ -149,10 +146,9 @@ void makeMapAndCheck(int d1, int d2) {
 			break;
 	}
 
-
 	dfs(x+1, y);
 
-	check[x][y] = 5; // /
+	check[x][y] = 5; 
 	tmp_x = x, tmp_y = y;
 	while (1) {
 		tmp_x++;
@@ -172,41 +168,6 @@ void makeMapAndCheck(int d1, int d2) {
 			break;
 		dfs(tmp_x + 1, tmp_y);
 	}
-
-
-	/*for (int i = 0; i < n; i++) {
-		for (int j = 0; j < n; j++) {
-			if (check[i][j] != 5) {
-				int c = 0;
-				for (int k = 0; k < 4; k++) {
-					int nx = i + dx[k], ny = j + dy[k];
-					if (nx >= n || nx < 0 || ny >= n || ny < 0) continue;
-					if (check[nx][ny] == 5)
-						c++;
-				}
-				if (c == 4)
-					check[i][j] = 5;
-			}
-				
-		}
-	}*/
-	//선거구 완성
-	
-	/*cout << "x: " <<x << "y: "<<y << endl;
-	cout << "d1: " << d1 << "d2: " << d2 << endl;
-	cout << endl;
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < n; j++) {
-			if(check[i][j]==5)
-				cout << check[i][j] << " ";
-			else cout << 0 << " ";
-		}
-		cout << endl;
-	}
-	cout << endl;*/
-	
-
-
 
 	int nums[5] = { 0,0,0,0,0 };
 	for (int i = 0; i < n; i++) {
@@ -230,7 +191,6 @@ void makeMapAndCheck(int d1, int d2) {
 	}
 
 	sort(nums, nums + 5);
-
 	res = min(res, abs(nums[0] - nums[4]));
 }
 
@@ -242,13 +202,9 @@ void permutaion() {
 	}
 
 	for (int i = 1; i <= 10; i++) {
-		//if (!visited[i]) {
-			//visited[i] = true;
-			v.push_back(i);
-			permutaion();
-			v.pop_back();
-			//visited[i] = false;
-		//}
+		v.push_back(i);
+		permutaion();
+		v.pop_back();
 	}
 }
 
@@ -271,11 +227,6 @@ int main() {
 	}
 
 	solve();
-
-
-
 	printf("%d",res);
-
-
 	return 0;
 }

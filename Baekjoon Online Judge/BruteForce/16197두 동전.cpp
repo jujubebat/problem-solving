@@ -24,7 +24,7 @@ void dfs(pos a, pos b, int cnt) {
 		int nbx = b.x + dx[i], nby = b.y + dy[i];
 		bool a_flag = false, b_flag = false;
 
-		if (nax >= n || nax < 0 || nay >= m || nay < 0) a_flag = true;  //aµ¿ÀüÀÌ Å»Ãâ
+		if (nax >= n || nax < 0 || nay >= m || nay < 0) a_flag = true;//aµ¿ÀüÀÌ Å»Ãâ
 		if (nbx >= n || nbx < 0 || nby >= m || nby < 0) b_flag = true;//bµ¿ÀüÀÌ Å»Ãâ
 
 		if (!a_flag && !b_flag) {

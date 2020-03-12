@@ -9,6 +9,7 @@ vector<int> v;
 int n, k;
 
 bool check[2000001] = { false };
+
 void dfs(int cnt) {
 	if (v.size() == k) {
 		bool c[20] = { false };
@@ -66,8 +67,8 @@ int main() {
 	}
 	printf("%d", i);
 	return 0;
-}
-*/
+}*/
+
 
 //더 간단하고 좋은 풀이
 #include<iostream> 
