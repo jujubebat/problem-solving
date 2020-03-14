@@ -53,15 +53,6 @@ bool isPossible(int x, int y, int num) {
 
 void dfs(int si, int sj){
 
-	/*for (int i = 0; i < 9; i++) {
-		for (int j = 0; j < 9; j++) {
-			printf("%d ",map[i][j]);
-		}
-		puts("");
-	}
-	puts("");*/
-
-
 	if (flag) return; // 1번 완성하면, 종료.
 
 	if (isComplete()) {//완성된다면 종료.
