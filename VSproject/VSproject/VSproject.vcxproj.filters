@@ -33,5 +33,11 @@
     <ClCompile Include="10844쉬운계단수.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="array.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="stack.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
