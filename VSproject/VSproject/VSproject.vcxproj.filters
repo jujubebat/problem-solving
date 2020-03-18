@@ -15,28 +15,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="EX.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="14890경사로.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="2629양팔저울.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1454직사각형으로 나누기.cpp">
+    <ClCompile Include="12886돌 그룹.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2529부등호.cpp">
+    <ClCompile Include="ex_cpp.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="10844쉬운계단수.cpp">
+    <ClCompile Include="ex_c.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="array.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="stack.c">
+    <ClCompile Include="12100 2048(Easy).cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
