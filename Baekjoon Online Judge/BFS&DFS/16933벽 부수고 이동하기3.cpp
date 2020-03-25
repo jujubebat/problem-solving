@@ -3,7 +3,7 @@
 using namespace std;
 
 typedef struct {
-	int x, y, broken, day; //0Àº ³·, 1Àº ¹ã
+	int x, y, broken, day; 
 }pos;
 
 int n, m, k;

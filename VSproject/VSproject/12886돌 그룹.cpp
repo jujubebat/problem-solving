@@ -1,73 +1,49 @@
 #include<iostream>
+
 using namespace std;
 
-int res = 0;
-bool visited[1001][1001];
-bool flag;
+bool check[1501][1501];
+int sum;
 
-void go(int a, int b, int c) {
-	//printf("%d %d %d\n", a, b, c);
-	if (flag) return;
+void go(int x, int y) {
+	if (check[x][y]) return;
+	check[x][y] = true;
 
-	if (a == b && b == c) {
-		res = 1;
-		flag = true;
-		return;
-	}
+	int a[3] = { x,y,sum - x - y };
 
-	if (a > 1000 || b > 1000 || c > 1000) return;
-
-	if (visited[a][b]) return;
-
-	visited[a][b] = true;
-
-	int na, nb, nc;
-	if (a < b) {
-		na = a + a, nb = b - c, nc = c;
-		if (na >= 0 && nb >= 0 && nc >= 0) {
-			go(na, nb, nc);
-		}
-	}
-	else if (a > b) {
-		na = a - b, nb = b + b, nc = c;
-		if (na >= 0 && nb >= 0 && nc >= 0) {
-			go(na, nb, nc);
-		}
-	}
-
-	if (b < c) {
-		na = a, nb = b + b, nc = c - b;
-		if (na >= 0 && nb >= 0 && nc >= 0) {
-			go(na, nb, nc);
-		}
-	}
-	else if (b > c) {
-		na = a, nb = b - c, nc = c + c;
-		if (na >= 0 && nb >= 0 && nc >= 0) {
-			go(na, nb, nc);
-		}
-	}
-
-	if (a > c) {
-		na = a - c, nb = b, nc = c + c;
-		if (na >= 0 && nb >= 0 && nc >= 0) {
-			go(na, nb, nc);
-		}
-	}
-	else if (a < c) {
-		na = a + a, nb = b, nc = c - a;
-		if (na >= 0 && nb >= 0 && nc >= 0) {
-			go(na, nb, nc);
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			if (a[i] < a[j]) {
+				int b[3] = { x, y, sum - x - y };
+				b[i] += a[i];
+				b[j] -= a[i];
+				go(b[0], b[1]);
+			}
 		}
 	}
 }
 
 int main() {
-	int a, b, c;
+	int x, y, z;
 
-	cin >> a >> b >> c;
-	go(a, b, c);
+	cin >> x >> y >> z;
+	sum = x + y + z;
 
-	printf("%d", res);
+	if (sum % 3 != 0) {
+		cout << 0;
+		return 0;
+	}
+
+	go(x, y);
+
+	if (check[sum / 3][sum / 3]) {
+		cout << 1;
+	}
+	else {
+		cout << 0;
+	}
+		
 	return 0;
+
+	
 }

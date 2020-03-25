@@ -56,7 +56,6 @@ void bfs() {
 	}
 }
 
-
 int main() {
 	cin >> start >> dest;
 	bfs();
