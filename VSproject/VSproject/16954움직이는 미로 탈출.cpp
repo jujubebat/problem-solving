@@ -1,56 +1,54 @@
 #include<iostream>
 #include<queue>
+#include<tuple>
+
 using namespace std;
 
 typedef struct {
-	int x, y;
-}laser;
+	int x, y, t;
+}pos;
 
-int w, h, ex, ey = -1;
-queue<laser> q;
-char map[100][100];
-int visited[100][100];
-const int dx[] = { -1,0,1,0 }, dy[] = { 0,1,0 - 1 };
+char map[8][8];
+queue<pos> q;
+bool visited[8][8][9];
 
-void bfs() {
-	while (!q.empty()) {
-		int x = q.front().x, y = q.front().y; q.pop();
-		for (int i = 0; i < 4; i++) {
-			int nx = x + dx[i], ny = y + dy[i];
-			while (0 <= nx && nx < h && 0 <= ny && ny < w && map[nx][ny] != '*') {
-				if (!visited[nx][ny]) {
-					visited[nx][ny] = visited[x][y] + 1;
-					q.push({ nx, ny });
-				}
-				nx += dx[i], ny += dy[i];
-			}
-		}
-	}
-	puts("");
-	for (int i = 0; i < h; i++) {
-		for (int j = 0; j < w; j++) {
-			printf("%d ", visited[i][j]);
-		}
-		puts("");
-	}
-	puts("");
-}
+int dx[] = { 0,0,1,-1,1,-1,1,-1,0 };
+int dy[] = { 1,-1,0,0,1,1,-1 - 1,0 };
 
 int main() {
-	cin >> w >> h;
-	for (int i = 0; i < h; i++) {
-		for (int j = 0; j < w; j++) {
-			cin >> map[i][j];
-			if (map[i][j] == 'C') {
-				if (ey == -1) ex = i, ey = j;
-				else q.push({ i,j });
-			}
+	for (int i = 0; i < 8; i++) {
+		for (int j = 0; j < 8; j++) {
+			scanf_s("%1c", &map[i][j]);
 		}
 	}
 
-	bfs();
-	cout << visited[ex][ey] - 1;
+	q.push({ 7,0,0 });
+	bool ans = false;
+
+	while (!q.empty()) {
+		int x = q.front().x, y = q.front().y, t = q.front().t; 
+		q.pop();
+		if (x == 0 && y == 7) ans = true;
+
+		for (int k = 0; k < 9; k++) {
+			int nx = x + dx[k];
+			int ny = y + dy[k];
+			int nt = min(t + 1, 8);
+
+			if (nx >= 8 || nx < 0 || ny >= 8 || ny < 0) continue;
+			if (nx - t >= 0 && map[nx - t][ny] == '#') continue;
+			if (nx - t - 1 >= 0 && map[nx - t-1][ny] == '#') continue;
+			if (visited[nx][ny][nt]) continue;
+
+			visited[nx][ny][nt] = true;
+			q.push({ nx,ny,nt });
+		}
+	}
+
+	if (ans)
+		cout << 1;
+	else
+		cout << 0;
+
 	return 0;
 }
-
-
