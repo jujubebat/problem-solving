@@ -1,29 +1,24 @@
 #include<iostream>
-#include<queue>
+#include<string>
+
 using namespace std;
 
 int main() {
-	queue<int> q;
+	string s = "hello world!";
+	string s2 = "HELLO world!";
 
-	q.push(1);
-	q.push(2);
-	q.push(3);
-	q.push(4);
+	printf("s size = %d\n", s.size());
 
-	printf("q.size() : %d, q.front() : %d, q.back() : %d\n",q.size(), q.front(), q.back());
+	string w = s.substr(0, 5);
 
-	q.pop();
-	q.pop();
+	cout << w << endl;
 
-	printf("q.size() : %d, q.front() : %d, q.back() : %d\n", q.size(), q.front(), q.back());
+	s.replace(0, 5, "HELLO");
 
-	q.pop();
-	q.pop();
+	cout << s << endl;
 
-	if (q.empty())
-		printf("큐가 비어있습니다.");
+	if (s.compare(s2) == 0)
+		cout << "s1, s2 same";
 
 	return 0;
 }
-
-

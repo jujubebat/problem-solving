@@ -21,9 +21,6 @@
     <ClCompile Include="12886돌 그룹.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ex_cpp.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="ex_c.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -37,6 +34,24 @@
       <Filter>소스 파일\실패한것들..</Filter>
     </ClCompile>
     <ClCompile Include="16954움직이는 미로 탈출.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="EX_CPP.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="14681사분면 고르기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1080행렬.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1991트리 순회.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="5639 이진 검색 트리.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
