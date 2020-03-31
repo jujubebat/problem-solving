@@ -28,7 +28,7 @@ int bfs() {
 
 		int nx, ny, nz; 
 
-		for (int i = 0; i < 4; i++) { //¿ø¼þÀÌ
+		for (int i = 0; i < 4; i++) { 
 			nx = x + monkey_dx[i], ny = y + monkey_dy[i], nz = z;
 			if (nx >= h || nx < 0 || ny >= w || ny < 0) continue;
 			if (visited[nx][ny][nz]) continue;

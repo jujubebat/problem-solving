@@ -18,46 +18,34 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="12886돌 그룹.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="ex_c.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="2629양팔저울.cpp">
-      <Filter>소스 파일\실패한것들..</Filter>
-    </ClCompile>
-    <ClCompile Include="12100 2048(Easy).cpp">
       <Filter>소스 파일\실패한것들..</Filter>
     </ClCompile>
     <ClCompile Include="14890경사로.cpp">
       <Filter>소스 파일\실패한것들..</Filter>
     </ClCompile>
-    <ClCompile Include="16954움직이는 미로 탈출.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Main.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="EX_CPP.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="14681사분면 고르기.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="1080행렬.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\실패한것들..</Filter>
     </ClCompile>
     <ClCompile Include="1991트리 순회.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\실패한것들..</Filter>
     </ClCompile>
     <ClCompile Include="5639 이진 검색 트리.cpp">
+      <Filter>소스 파일\실패한것들..</Filter>
+    </ClCompile>
+    <ClCompile Include="12886돌 그룹.cpp">
+      <Filter>소스 파일\실패한것들..</Filter>
+    </ClCompile>
+    <ClCompile Include="14681사분면 고르기.cpp">
+      <Filter>소스 파일\실패한것들..</Filter>
+    </ClCompile>
+    <ClCompile Include="16954움직이는 미로 탈출.cpp">
+      <Filter>소스 파일\실패한것들..</Filter>
+    </ClCompile>
+    <ClCompile Include="1790 수 이어 쓰기2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="6593상범 빌딩.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="1600말이 되고픈 원숭이.cpp">
+    <ClCompile Include="2138전구와 스위치.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
