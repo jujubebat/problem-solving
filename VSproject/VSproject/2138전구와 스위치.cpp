@@ -38,7 +38,6 @@ void pushButton(int i) {
 }
 
 int main() {
-	
 
 	cin >> n;
 
@@ -58,8 +57,6 @@ int main() {
 			return 0;
 		}
 	}
-	
-
 
 	printf("-1");
 	return 0;
