@@ -48,19 +48,28 @@
     <ClCompile Include="2138전구와 스위치.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="EX.cpp">
+    <ClCompile Include="EX.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="15661링크와 스타트.cpp">
+    <ClCompile Include="14226이모티콘.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="17143낚시왕.cpp">
+    <ClCompile Include="1248맞춰봐.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2446별찍기-9.cpp">
+    <ClCompile Include="2003수들의 합2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="4179불!.cpp">
+    <ClCompile Include="2559수열.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2470두 용액.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2493탑.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1038감소하는 수.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
