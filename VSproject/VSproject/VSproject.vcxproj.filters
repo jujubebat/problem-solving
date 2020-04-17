@@ -51,25 +51,10 @@
     <ClCompile Include="EX.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="14226이모티콘.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="1248맞춰봐.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2003수들의 합2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="2559수열.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2470두 용액.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2493탑.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="1038감소하는 수.cpp">
+    <ClCompile Include="17140이차원 배열과 연산.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
