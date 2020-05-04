@@ -68,6 +68,7 @@ void boom() {
 				if (map[k][j] == '.') {
 					map[k][j] = map[i][j];
 					map[i][j] = '.';
+					break;
 				}
 			}
 		}
