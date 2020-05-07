@@ -75,10 +75,13 @@
     <ClCompile Include="11723집합.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="오픈채팅방.cpp">
+    <ClCompile Include="방금그곡.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="소스.cpp">
+    <ClCompile Include="실패율.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="후보키.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
