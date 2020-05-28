@@ -159,5 +159,8 @@
     <ClCompile Include="15659번 연산자 끼워넣기(3).cpp">
       <Filter>소스 파일\오늘 푼거</Filter>
     </ClCompile>
+    <ClCompile Include="16932모양만들기.cpp">
+      <Filter>소스 파일\오늘 푼거</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
