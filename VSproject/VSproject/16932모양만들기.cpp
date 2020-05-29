@@ -1,148 +1,73 @@
 #include<iostream>
-#include<queue>
+#include<algorithm>
+#include<set>
 using namespace std;
 
-typedef struct {
-	int x, y;
-}pos;
-
-int map[1000][1000];
-int ret = 1;
-const int dx[] = { -1,1,0, 0 }, dy[] = { 0,0,-1,1 };
 int n, m;
-bool visited[1000][1000];
+int map[1000][1000];
+int visited[1000][1000];
+int group[1000001]; // 그룹은 최대 1000000번까지 존재할 수 있다. 
+int groupNum = 1;
+int cnt = 0;
+int dx[] = { -1,1,0,0 }, dy[] = { 0,0,-1,1 };
 
-int bfs(int sx, int sy) {
-	int cnt = 1;
-	queue<pos> q;
-	visited[sx][sy] = true;
+void dfs(int sx, int sy) { // 그룹을 짓기 위한 dfs
+	cnt++; // 그룹의 크기를 계산
+	visited[sx][sy] = groupNum;
 
-	q.push({ sx,sy });
-	while (!q.empty()) {
-		int x = q.front().x, y = q.front().y;
-		q.pop();
-
-		for (int i = 0; i < 4; i++) {
-			int nx = x + dx[i], ny = y + dy[i];
-			if (nx >= n || nx < 0 || ny >= m || ny < 0) continue;
-			if (map[nx][ny] == 0) continue;
-			if (visited[nx][ny]) continue;
-
-			cnt++;
-			visited[nx][ny] = true;
-			q.push({ nx,ny });
-		}
-	}
-
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
-			if (visited[i][j])
-				cout << 1;
-			else
-				cout << 0;
-		}
-		cout << endl;
-	}
-	cout << endl;
-
-
-	return cnt;
-}
-
-void bfsSolve() {
-
-	memset(visited, false, sizeof(visited));
-
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
-			if(map[i][j])
-				ret = max(ret, bfs(i,j));
-		}
+	for (int i = 0; i < 4; i++) {
+		int nx = sx + dx[i], ny = sy + dy[i];
+		if (nx >= n || nx < 0 || ny >= m || ny < 0) continue;
+		if (map[nx][ny] == 0) continue;
+		if (visited[nx][ny]) continue;
+		dfs(nx, ny);
 	}
 }
 
 void solve() {
+	int ret = 0;
 
-	bool flag = true;
-	for (int i = 0; i < n; i++) {
+	for (int i = 0; i < n; i++) { 
 		for (int j = 0; j < m; j++) {
-			if (map[i][j] == 0) {
-
-				int cnt = 0;
-				for (int k = 0; k < 4; k++) {
-					int nx = i + dx[k], ny = j + dy[k];
-					if (nx >= n || nx < 0 || ny >= m || ny < 0) continue;
-					if (map[nx][ny]) cnt++;
-				}
-
-				if (cnt >= 2) {
-					// bfs를 돌린다. 
-					map[i][j] = 1;
-					bfsSolve();
-					map[i][j] = 0;
-					if (flag) flag = false;
-				}
+			if (map[i][j] && !visited[i][j]) {
+				cnt = 0;
+				dfs(i, j); 
+				group[groupNum++] = cnt; // 그룹의 크기를 저장.
 			}
 		}
 	}
 
-	if (flag) {
-		//bfs 돌리고 최대값을 찾는다. 
-		bfsSolve();
-	}
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
 
+			if (map[i][j] == 0) { // 0인 원소를 기준으로 상하좌우를 확인.
+				int candi = 1; // map[i][j]를 1로 바꿨을때 만들어지는 모양의 크기
+				set<int> s; // set으로 이미 포함한 그룹 여부를 확인.
+				for (int k = 0; k < 4; k++) {
+					int nx = i + dx[k], ny = j + dy[k];
+					if (nx >= n || nx < 0 || ny >= m || ny < 0) continue;
+					if (visited[nx][ny] == 0) continue;
+					if (s.count(visited[nx][ny])) continue;
+					s.insert(visited[nx][ny]);
+					candi += group[visited[nx][ny]]; // 최대값 갱신.
+				}
+				ret = max(ret, candi);
+			}
+
+		}
+	}
 	cout << ret;
 }
 
 int main() {
-	bool flag = false;
 
 	cin >> n >> m;
-
-	for (int i = 0; i < n; i++) {
+	for (int i = 0; i < n; i++) { // 배열 입력.
 		for (int j = 0; j < m; j++) {
 			cin >> map[i][j];
-			if (map[i][j] == 0)
-				flag = true;
 		}
-	}
-
-
-	if (flag) {
-		cout << n * m;
-		return 0;
 	}
 
 	solve();
 	return 0;
 }
-
-/*
-1 000 000 * 1 000 000
-1 000 000 * 1 000 000
-
-백만번을 1을 0으로 바꿔봐야함....
-시간복잡도가 너무 큰데
-
-0을 1로 바꿔바야함.
-
-모든 0을 1로바꿔보고 dfs / bfs를 돌려서 최대크기 확인
-시간복잡도가 터짐... 다른 아이디어필요
-*/
-
-/*
-모든 0을 1로 바꿔보지 않고
-0에서 인접한 1이 두개 이상있는 경우에만 바꿔본다.
-인접합 1이두개 이상 없는 경우에는 최대 모양 +1 을
-해준다.
-모든 칸이 1이라면 그냥 출력한다.
-
-0 0 0 0
-1 0 0 0
-0 0 1 1
-
-1 1 1 1
-1 1 1 1
-1 1 1 1 */
-
-
