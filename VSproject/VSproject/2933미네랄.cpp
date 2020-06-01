@@ -1,5 +1,11 @@
 #include<iostream>
+#include<cstring>
+#include<vector>
 using namespace std;
+
+typedef struct {
+	int x, y;
+}pos;
 
 char map[100][100];
 int r, c;
@@ -13,9 +19,7 @@ bool bottomCluster[101];
 void dfs(int x, int y) {
 	if (!bottomCluster[cnt] && x == r - 1) // 땅에 닿아있는 클러스터 체크
 		bottomCluster[cnt] = true;
-
 	visited[x][y] = cnt;
-
 	for (int i = 0; i < 4; i++) {
 		int nx = x + dx[i], ny = y + dy[i];
 		if (nx >= r || nx < 0 || ny >= c || ny < 0) continue;
@@ -23,8 +27,9 @@ void dfs(int x, int y) {
 		if (map[nx][ny] == '.') continue;
 		dfs(nx, ny);
 	}
-
 }
+
+
 
 void fallMineral() {
 	cnt = 1;
@@ -33,39 +38,71 @@ void fallMineral() {
 	
 	for (int i = 0; i < r; i++) {
 		for (int j = 0; j < c; j++) {
-
 			if (map[i][j] == 'x' && !visited[i][j]) {
-
 				dfs(i, j);
 				cnt++;
-
 			}
 		}
 	}
 
-	if (cnt > 2) { // 분리된 클러스터가 생긴경우. 중력을 작용한다. 
-		bool flag = false;
-		int a = 0;
-		while (1) {
-			for (int row = r - 1; row > 0; row--) {
-				for (int col = 0; col < c; col++) {
+	cout << "바닥에 닿아있는 클러스터 목록";
+	for (int i = 0; i < 100; i++) {
+		if (bottomCluster[i])
+			cout << i << " ";
+	}
+	cout << endl;
 
-					if (map[row][col] == '.' && map[row - 1][col] == 'x') {
-						if (!bottomCluster[map[row - 1][col]]) {
-							swap(map[row][col], map[row - 1][col]);
-							if (row == r - 1) {
-								flag = true;
-							}
-							else if (bottomCluster[map[row - 1][col]]) {
-								flag = true;
-							}
-						}
-					}
+
+	for (int i = 0; i < r; i++) {
+		for (int j = 0; j < c; j++) {
+			cout << visited[i][j];
+		}
+		cout << endl;
+	}
+	cout << endl;
+	
+	vector<pos> v;
+	
+	if (cnt > 2) { // 분리된 클러스터가 생긴경우. 중력을 작용한다. 
+		// 떨어뜨릴 클러스트의 좌표를 저장해둔다. 
+		for (int i = 0; i < r; i++) {
+			for (int j = 0; j < c; j++) {
+
+				if (visited[i][j] != 0 && !bottomCluster[visited[i][j]]) {
+					cout << i << j << endl;
+					v.push_back({ i,j });
 				}
+
+			}
+		}
+
+		bool flag = false;
+
+		cout << "v.size() : " <<  v.size();
+
+		while (1){
+			for (int i = 0; i < v.size(); i++) {
+				map[v[i].x][v[i].y] = '.';
+			}
+
+			/*for (int i = 0; i < v.size(); i++) {
+				int nx = v[i].x + 1, ny = v[i].y;
+				map[nx][ny] = 'x';
+
+				if (nx + 1 == r || map[nx+1][ny] == 'x')
+					flag = true;
+			}*/
+
+			for (int i = 0; i < r; i++) {
+				for (int j = 0; j < c; j++) {
+					cout << map[i][j];
+				}
+				cout << endl;
 			}
 
 			if (flag) return;
 		}
+	
 	}
 }
 
