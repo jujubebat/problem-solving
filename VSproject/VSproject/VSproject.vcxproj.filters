@@ -150,20 +150,11 @@
     <ClCompile Include="가장 긴 증가하는 부분 수열2.cpp">
       <Filter>소스 파일\최근에 푼거!</Filter>
     </ClCompile>
-    <ClCompile Include="16928뱀과 사다리 게임.cpp">
-      <Filter>소스 파일\오늘 푼거</Filter>
-    </ClCompile>
-    <ClCompile Include="3020개똥벌레.cpp">
-      <Filter>소스 파일\오늘 푼거</Filter>
-    </ClCompile>
     <ClCompile Include="15659번 연산자 끼워넣기(3).cpp">
       <Filter>소스 파일\오늘 푼거</Filter>
     </ClCompile>
-    <ClCompile Include="16932모양만들기.cpp">
-      <Filter>소스 파일\오늘 푼거</Filter>
-    </ClCompile>
-    <ClCompile Include="2933미네랄.cpp">
-      <Filter>소스 파일\오늘 푼거</Filter>
+    <ClCompile Include="괄호 변환.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
