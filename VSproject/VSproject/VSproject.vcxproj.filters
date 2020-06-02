@@ -132,9 +132,6 @@
     <ClCompile Include="17140이차원 배열과 연산.cpp">
       <Filter>소스 파일\지옥</Filter>
     </ClCompile>
-    <ClCompile Include="1238파티.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
     <ClCompile Include="4963섬의 개수.cpp">
       <Filter>소스 파일\최근에 푼거!</Filter>
     </ClCompile>
@@ -150,13 +147,13 @@
     <ClCompile Include="가장 긴 증가하는 부분 수열2.cpp">
       <Filter>소스 파일\최근에 푼거!</Filter>
     </ClCompile>
-    <ClCompile Include="15659번 연산자 끼워넣기(3).cpp">
-      <Filter>소스 파일\오늘 푼거</Filter>
-    </ClCompile>
     <ClCompile Include="괄호 변환.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="16938캠프 준비.cpp">
+    <ClCompile Include="15659번 연산자 끼워넣기(3).cpp">
+      <Filter>소스 파일\지옥</Filter>
+    </ClCompile>
+    <ClCompile Include="7662 이중 우선순위 큐.cpp">
       <Filter>소스 파일\오늘 푼거</Filter>
     </ClCompile>
   </ItemGroup>
