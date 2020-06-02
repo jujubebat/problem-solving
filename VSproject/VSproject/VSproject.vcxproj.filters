@@ -156,5 +156,8 @@
     <ClCompile Include="괄호 변환.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="16938캠프 준비.cpp">
+      <Filter>소스 파일\오늘 푼거</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
