@@ -156,5 +156,14 @@
     <ClCompile Include="7662 이중 우선순위 큐.cpp">
       <Filter>소스 파일\오늘 푼거</Filter>
     </ClCompile>
+    <ClCompile Include="1342행운의 문자열.cpp">
+      <Filter>소스 파일\오늘 푼거</Filter>
+    </ClCompile>
+    <ClCompile Include="가사검색.cpp">
+      <Filter>소스 파일\오늘 푼거</Filter>
+    </ClCompile>
+    <ClCompile Include="2208보석줍기.cpp">
+      <Filter>소스 파일\오늘 푼거</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
