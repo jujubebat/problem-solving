@@ -1,160 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="소스 파일">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="헤더 파일">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="리소스 파일">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="소스 파일\지옥">
-      <UniqueIdentifier>{db6ca904-bbda-449f-9a2d-53a7d14b52f7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\오늘 푼거">
-      <UniqueIdentifier>{e49e0f1b-f834-48c5-92cf-bdadbe1334b4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\최근에 푼거!">
-      <UniqueIdentifier>{4d00a3f9-7d2e-4f68-bf20-dcecf0625f28}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="1080행렬.cpp" />
+    <ClCompile Include="10816숫자카드2.cpp" />
+    <ClCompile Include="11561징검다리.cpp" />
+    <ClCompile Include="12886돌 그룹.cpp" />
+    <ClCompile Include="14425문자열 집합.cpp" />
+    <ClCompile Include="16938캠프 준비.cpp" />
+    <ClCompile Include="15659번 연산자 끼워넣기(3).cpp" />
+    <ClCompile Include="15810풍선 공장.cpp" />
+    <ClCompile Include="15831준표의 조약돌.cpp" />
+    <ClCompile Include="16401과자 나눠주기.cpp" />
+    <ClCompile Include="1662압축.cpp" />
+    <ClCompile Include="16935배열 돌리기3.cpp" />
+    <ClCompile Include="2792보석상자.cpp" />
+    <ClCompile Include="3079입국심사.cpp" />
+    <ClCompile Include="2776암기왕.cpp" />
+    <ClCompile Include="14681사분면 고르기.cpp" />
+    <ClCompile Include="14890경사로.cpp" />
+    <ClCompile Include="1647도시 분할 계획.cpp" />
+    <ClCompile Include="16926배열 돌리기1.cpp" />
+    <ClCompile Include="16954움직이는 미로 탈출.cpp" />
+    <ClCompile Include="17140이차원 배열과 연산.cpp" />
+    <ClCompile Include="2343기타레슨.cpp" />
+    <ClCompile Include="2751수 정렬하기 2.cpp" />
+    <ClCompile Include="2512 예산.cpp" />
+    <ClCompile Include="3671산업 스파이의 편지.cpp" />
+    <ClCompile Include="4948 베르트랑 공준.cpp" />
+    <ClCompile Include="4963섬의 개수.cpp" />
+    <ClCompile Include="6198옥상정원 꾸미기.cpp" />
+    <ClCompile Include="1790 수 이어 쓰기2.cpp" />
+    <ClCompile Include="1991트리 순회.cpp" />
+    <ClCompile Include="2559수열.cpp" />
+    <ClCompile Include="2629양팔저울.cpp" />
+    <ClCompile Include="5639 이진 검색 트리.cpp" />
+    <ClCompile Include="2138전구와 스위치.cpp" />
+    <ClCompile Include="6236공유기 설치.cpp" />
+    <ClCompile Include="6236용돈관리.cpp" />
+    <ClCompile Include="7573고기잡이.cpp" />
+    <ClCompile Include="11723집합.cpp" />
+    <ClCompile Include="가장 긴 증가하는 부분 수열2.cpp" />
+    <ClCompile Include="괄호 변환.cpp" />
+    <ClCompile Include="방금그곡.cpp" />
+    <ClCompile Include="자물쇠와 열쇠.cpp" />
+    <ClCompile Include="징검다리 건너기.cpp" />
+    <ClCompile Include="카카오 인턴 코테.cpp" />
+    <ClCompile Include="1342행운의 문자열.cpp">
+      <Filter>오늘 푼거</Filter>
+    </ClCompile>
+    <ClCompile Include="dfs.cpp">
+      <Filter>오늘 푼거</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1790 수 이어 쓰기2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2138전구와 스위치.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="방금그곡.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="자물쇠와 열쇠.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="카카오 인턴 코테.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="6236용돈관리.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="7573고기잡이.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="6236공유기 설치.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="2343기타레슨.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="2512 예산.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="2776암기왕.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="3079입국심사.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="징검다리 건너기.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="2792보석상자.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="16401과자 나눠주기.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="15810풍선 공장.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="11561징검다리.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="4948 베르트랑 공준.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="1662압축.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="1080행렬.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="1647도시 분할 계획.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="1991트리 순회.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="2559수열.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="2629양팔저울.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="2751수 정렬하기 2.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="3671산업 스파이의 편지.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="5639 이진 검색 트리.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="6198옥상정원 꾸미기.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="10816숫자카드2.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="11723집합.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="12886돌 그룹.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="14681사분면 고르기.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="14890경사로.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="16926배열 돌리기1.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="16954움직이는 미로 탈출.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="17140이차원 배열과 연산.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="4963섬의 개수.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="14425문자열 집합.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="15831준표의 조약돌.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="16935배열 돌리기3.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="가장 긴 증가하는 부분 수열2.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="괄호 변환.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="15659번 연산자 끼워넣기(3).cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="7662 이중 우선순위 큐.cpp">
-      <Filter>소스 파일\오늘 푼거</Filter>
-    </ClCompile>
+    <Filter Include="오늘 푼거">
+      <UniqueIdentifier>{53e8b4e9-d653-4c81-8c2f-18853b28c40a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
