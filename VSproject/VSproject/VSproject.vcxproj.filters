@@ -33,43 +33,16 @@
     <ClCompile Include="방금그곡.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="자물쇠와 열쇠.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="카카오 인턴 코테.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="6236용돈관리.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
     <ClCompile Include="7573고기잡이.cpp">
       <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="6236공유기 설치.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="2343기타레슨.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
     </ClCompile>
     <ClCompile Include="2512 예산.cpp">
       <Filter>소스 파일\최근에 푼거!</Filter>
     </ClCompile>
     <ClCompile Include="2776암기왕.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="3079입국심사.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="징검다리 건너기.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="2792보석상자.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="16401과자 나눠주기.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="15810풍선 공장.cpp">
       <Filter>소스 파일\최근에 푼거!</Filter>
     </ClCompile>
     <ClCompile Include="11561징검다리.cpp">
@@ -97,9 +70,6 @@
       <Filter>소스 파일\지옥</Filter>
     </ClCompile>
     <ClCompile Include="2751수 정렬하기 2.cpp">
-      <Filter>소스 파일\지옥</Filter>
-    </ClCompile>
-    <ClCompile Include="3671산업 스파이의 편지.cpp">
       <Filter>소스 파일\지옥</Filter>
     </ClCompile>
     <ClCompile Include="5639 이진 검색 트리.cpp">
@@ -141,9 +111,6 @@
     <ClCompile Include="15831준표의 조약돌.cpp">
       <Filter>소스 파일\최근에 푼거!</Filter>
     </ClCompile>
-    <ClCompile Include="16935배열 돌리기3.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
     <ClCompile Include="가장 긴 증가하는 부분 수열2.cpp">
       <Filter>소스 파일\최근에 푼거!</Filter>
     </ClCompile>
@@ -156,13 +123,7 @@
     <ClCompile Include="7662 이중 우선순위 큐.cpp">
       <Filter>소스 파일\오늘 푼거</Filter>
     </ClCompile>
-    <ClCompile Include="1342행운의 문자열.cpp">
-      <Filter>소스 파일\오늘 푼거</Filter>
-    </ClCompile>
     <ClCompile Include="가사검색.cpp">
-      <Filter>소스 파일\오늘 푼거</Filter>
-    </ClCompile>
-    <ClCompile Include="3649로봇 프로젝트.cpp">
       <Filter>소스 파일\오늘 푼거</Filter>
     </ClCompile>
   </ItemGroup>
