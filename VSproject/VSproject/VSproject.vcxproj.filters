@@ -150,7 +150,7 @@
     <ClCompile Include="징검다리 건너기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="hello.cpp">
+    <ClCompile Include="기둥과 보 설치.cpp">
       <Filter>소스 파일\오늘 푼거</Filter>
     </ClCompile>
   </ItemGroup>
