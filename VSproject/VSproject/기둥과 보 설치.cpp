@@ -1,7 +1,6 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-#include <iostream>
 
 using namespace std;
 
@@ -11,25 +10,27 @@ int N;
 
 bool check() {
 
-	for (int i = 0; i < N + 1; i++) {
-		for (int j = 0; j < N + 1; j++) {
+	for (int i = 0; i <= N; i++) { // 보 조건 검사.
+		for (int j = 0; j <= N; j++) {
+			if (barrage[i][j]) {
+				// 보의 한 쪽 끝 부분이 기둥 위에 있는 경우.
+				if (pillar[i + 1][j] || pillar[i + 1][j + 1]) continue; 
+				// 보의 양쪽 끝 부분이 동시에 다른 보와 연결돼있는 경우.
+				if (barrage[i][j - 1] && barrage[i][j + 1]) continue; 
+				return false;
+			}
+		}
+	}
 
+	for (int i = 0; i <= N; i++) { // 기둥 조건 검사.
+		for (int j = 0; j <= N; j++) {
 			if (pillar[i][j]) {
 				if (i == N) continue; // 기둥이 바닥에 있는 경우.
 				if (pillar[i + 1][j]) continue;// 기둥이 다른 기둥 위에 있는 경우.
-				if (barrage[i][j]) continue; // 기둥이 보 왼쪽 끝위에 있는 경우.
-				if (j > 0 && barrage[i][j - 1]) continue; // 기둥이 보 오른쪽 끝 경우에 있는경우.
+				// 기둥이 보 왼쪽 또는 오른쪽 끝 위에 있는 경우.
+				if (barrage[i][j] || barrage[i][j - 1]) continue; 
 				return false;
 			}
-
-			if (barrage[i][j]) {
-				if (pillar[i + 1][j] || pillar[i + 1][j + 1]) continue; // 보의 한쪽 끝 부분이 기둥 위에 있는 경우.
-				if (j > 0 && j < N) {
-					if (barrage[i][j - 1] && barrage[i][j + 1]) continue; // 보의 양쪽 끝부분이 다른 보와 연결되어있을떄
-				}
-				return false;
-			}
-
 		}
 	}
 
@@ -37,12 +38,13 @@ bool check() {
 }
 
 void build(int x, int y, bool structure, bool action) {
+
 	if (structure)
-		barrage[x][y] = action; // 설치 or 삭제
+		barrage[x][y] = action; // 설치 or 삭제.
 	else
 		pillar[x][y] = action;
 
-	if (!check()) { // 설치 불가능할 경우 복구.
+	if (!check()) { // 작업의 결과가 조건을 위배하면, 원상 복구.
 		if (structure)
 			barrage[x][y] = !action;
 		else
@@ -55,8 +57,7 @@ vector<vector<int>> solution(int n, vector<vector<int>> build_frame) {
 	N = n;
 
 	for (int i = 0; i < build_frame.size(); i++) {
-
-		int x = n - build_frame[i][1]; // 행렬 기준 좌표계로 변환
+		int x = N - build_frame[i][1]; // 행렬 기준 좌표계로 변환.
 		int y = build_frame[i][0];
 		int a = build_frame[i][2];
 		int b = build_frame[i][3];
@@ -64,23 +65,24 @@ vector<vector<int>> solution(int n, vector<vector<int>> build_frame) {
 		build(x, y, a, b); // 기둥과 보 건설을 시도한다.
 	}
 
-	for (int i = 0; i < N + 1; i++) {
-		for (int j = 0; j < N + 1; j++) {
+	// 모든 작업이 끝난 후 구조물들의 최종 결과를 저장한다.
+	for (int i = 0; i <= N; i++) {  
+		for (int j = 0; j <= N; j++) {
 
-			int x = j, y = n - i; // 처음에 주어진 좌표계로 변환
+			int x = j, y = N - i; // 처음에 주어진 데카르트 좌표계로 변환.
 
-			if (pillar[i][j]) {
+			if (pillar[i][j]) { // 기둥 정보 저장.
 				answer.push_back({ x,y,0 });
 			}
 
-			if (barrage[i][j]) {
+			if (barrage[i][j]) { // 보 정보 저장.
 				answer.push_back({ x,y,1 });
 			}
-
+			// 참고 : 기둥과 보는 같은 위치에 올 수 있다.
 		}
 	}
 
-	sort(answer.begin(), answer.end()); // 문제 조건에 맞추어 정렬.
+	sort(answer.begin(), answer.end()); // 문제 조건에 맞추어 정렬 수행.
 	return answer;
 }
 
@@ -108,16 +110,9 @@ N + 1 * N + 1
 
 */
 
-int main() {
-	bool flag;
 
-	flag = 1;
+/*
+기둥은 바닥 위에 있거나, 보의 한쪽 끝 부분 위에 있거나, 다른 기둥위에 있어야 한다.
+보는 한쪽 끝 부분이 기둥 위에 있거나, 양쪽 끝 부부이 다른 보와 동시에 연결되어 있어야한다.
 
-	if (!flag)
-		cout << "true";
-	else
-		cout << "false";
-
-	return 0;
-}
-
+*/

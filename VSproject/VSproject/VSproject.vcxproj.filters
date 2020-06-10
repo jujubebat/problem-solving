@@ -153,5 +153,14 @@
     <ClCompile Include="기둥과 보 설치.cpp">
       <Filter>소스 파일\오늘 푼거</Filter>
     </ClCompile>
+    <ClCompile Include="청소년 상어.cpp">
+      <Filter>소스 파일\오늘 푼거</Filter>
+    </ClCompile>
+    <ClCompile Include="파일명 정렬.cpp">
+      <Filter>소스 파일\오늘 푼거</Filter>
+    </ClCompile>
+    <ClCompile Include="다트게임.cpp">
+      <Filter>소스 파일\오늘 푼거</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
