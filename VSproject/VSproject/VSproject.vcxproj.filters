@@ -114,9 +114,6 @@
     <ClCompile Include="15659번 연산자 끼워넣기(3).cpp">
       <Filter>소스 파일\지옥</Filter>
     </ClCompile>
-    <ClCompile Include="가사검색.cpp">
-      <Filter>소스 파일\오늘 푼거</Filter>
-    </ClCompile>
     <ClCompile Include="15810풍선 공장.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -150,16 +147,7 @@
     <ClCompile Include="징검다리 건너기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="기둥과 보 설치.cpp">
-      <Filter>소스 파일\오늘 푼거</Filter>
-    </ClCompile>
     <ClCompile Include="청소년 상어.cpp">
-      <Filter>소스 파일\오늘 푼거</Filter>
-    </ClCompile>
-    <ClCompile Include="파일명 정렬.cpp">
-      <Filter>소스 파일\오늘 푼거</Filter>
-    </ClCompile>
-    <ClCompile Include="다트게임.cpp">
       <Filter>소스 파일\오늘 푼거</Filter>
     </ClCompile>
   </ItemGroup>
