@@ -150,5 +150,11 @@
     <ClCompile Include="청소년 상어.cpp">
       <Filter>소스 파일\오늘 푼거</Filter>
     </ClCompile>
+    <ClCompile Include="압축.cpp">
+      <Filter>소스 파일\오늘 푼거</Filter>
+    </ClCompile>
+    <ClCompile Include="17144미세먼지 안녕!.cpp">
+      <Filter>소스 파일\오늘 푼거</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
