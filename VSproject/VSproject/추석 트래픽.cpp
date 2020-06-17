@@ -1,135 +1,54 @@
 #include <string>
 #include <vector>
-#include<iostream>
-#include<algorithm>
+#include <iostream>
+#include <algorithm>
 
 using namespace std;
 
+// 로그의 시작점(시간)과 끝점(시간)을 저장하는 구조체
 typedef struct {
-	int start, end;
+	int start, end; 
 }logTime;
 
-vector<logTime> timeList;
+vector<logTime> logList;
 
-void convert(string log) {
-
-	string a = "", b = "";
-	int start = 0, end = 0;
-	int cnt = 0;
-
-	for (int i = 0; i < log.size(); i++) {
-		if (log[i] == ' ') {
-			cnt++;
-			continue;
-		}
-		//if (log[i] == '.') continue;
-		if (log[i] == 's') continue;
-
-
-		if (cnt == 1) {
-			a += log[i];
-		}
-		else if (cnt == 2) {
-			b += log[i];
-		}
-	}
-
-	cout << "B : " << stof(b) << endl;
-
-	cout << "ab출력" << endl;
-	cout << a << " " << b << endl;
-	/*
-	start = ((a[0] - '0') * 10 + (a[1] - '0') * 1)*3600000
-		+ ((a[3] - '0') * 10 + (a[4] - '0') * 1) * 60000;
-
-	start += stoi(a.substr(6, 5));
-	end = start + stoi(b);*/
-
-	end = ((a[0] - '0') * 10 + (a[1] - '0') * 1) * 3600000
-		+ ((a[3] - '0') * 10 + (a[4] - '0') * 1) * 60000;
-
-	string tmp = a.substr(6, 6);
-	string after_tmp = "";
-	for (int i = 0; i < tmp.size(); i++) {
-
-		if (tmp[i] == '.') continue;
-		after_tmp += tmp[i];
-	}
-
-
-
-	end += stoi(after_tmp);
-
-	cout << "stoi(after_tmp)" << stoi(after_tmp) << endl;
-
-
-
-	cout << "(int)(stof(b) * 1000) : " << (int)(stof(b) * 1000) << endl;
-	start = end - (int)(stof(b) * 1000) + 1;
-
-	cout << "start : " << start << " " << "end : " << end << endl;
-	timeList.push_back({ start, end });
-
-}
-/*
-23 59 59 999 ~23 59 59 999
-
-86399999 + 1000 = 86400999*/
-
-int count(int s, int e) { // s부터 e까지의 구간
-	//cout << "count" << endl;
-	//cout << s << " " << e << endl;
+int count(int start, int end) { 
 	int ret = 0;
 
-	for (logTime n : timeList) {
-
-		if (s <= n.start && n.start <= e)
-			ret++;
-		else if (s <= n.end && n.end <= e)
-			ret++;
-		else if (s > n.start && e < n.end)
+	for (logTime log : logList) {
+		if ((start <= log.start && log.start <= end) // 로그 시작점이 1초 구간에 포함 되는지 검사.
+			|| (start <= log.end && log.end <= end) // 로그 끝점이 1초 구간에 포함 되는지 검사.
+			|| (start > log.start && end < log.end)) // 로그가 1초 구간 전체에 포함 되는지 검사.
 			ret++;
 	}
 
-
-
-	//cout<<"ret : " << ret << endl;
-	return ret;
+	return ret; // 1초구간에 포함된 로그 개수 반환.
 }
-
-
-
-/*
-
-3603983 ~ 3604983
-3604983 ~ 3605983
-
-
-
-*/
-
-/*
-12345 ~ 13345
-
-12345~13345*/
 
 int solution(vector<string> lines) {
 	int answer = 0;
 
 	for (int i = 0; i < lines.size(); i++) {
-		convert(lines[i]);
+		int y, m, d, hh, mm;
+		double ss, period;
+
+		// sscanf를 사용하면 간단하게 문자열 파싱을 할 수 있다.
+		sscanf(lines[i].c_str(), "%d-%d-%d %d:%d:%lf %lfs", &y, &m, &d, &hh, &mm, &ss, &period);
+
+		// 시간을 ms 단위로 바꾼다.
+		int end = (hh * 3600 * 1000) + (mm * 60 * 1000) + (int)(ss * 1000);
+		int start = end - (int)(period * 1000) + 1; // 끝시간을 포함하기 때문에 +1 해준다. 
+
+		// 로그의 시작점과 끝점을 vector에 넣어준다. 
+		logList.push_back({ start, end });
 	}
 
-	int firstLogTime = timeList[0].start; // 첫 시작 타임 (밀리초 기준)
-
-	while (firstLogTime <= timeList[timeList.size() - 1].end) {
-	//	cout << firstLogTime << " " << firstLogTime + 1000 << endl;
-		answer = max(answer, count(firstLogTime, firstLogTime + 1000));
-		firstLogTime++;
+	for (int i = 0; i < logList.size(); i++) {
+		// 로그의 시작점부터 1초 구간에 로그가 몇 개 포함되는지 검사.
+		answer = max(answer, count(logList[i].start, logList[i].start + 999)); 
+		// 로그의 끝점부터 1초구간에 로그개 몇 개 포함되는지 검사. 
+		answer = max(answer, count(logList[i].end, logList[i].end + 999)); 
 	}
 
 	return answer;
 }
-
-//3598005~3599005
-//3599005~3609005

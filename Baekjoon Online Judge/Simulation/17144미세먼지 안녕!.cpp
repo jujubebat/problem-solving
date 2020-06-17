@@ -12,7 +12,9 @@ const int dx[] = { 1,-1,0,0 }, dy[] = { 0,0,-1,1 };
 void diffuseDust() {
 
 	int tmpMap[50][50];
-	memcpy(tmpMap, map, sizeof(map)); // 동시 확산 처리를 위해, 원본 map을 임시 tmpMap에 복사해둔다. 
+
+	// 동시 확산 처리를 위해, 원본 map을 임시 tmpMap에 복사해둔다. 
+	memcpy(tmpMap, map, sizeof(map)); 
 
 	for (int i = 0; i < r; i++) {
 		for (int j = 0; j < c; j++) {
@@ -20,21 +22,29 @@ void diffuseDust() {
 				int diffuseAmount = map[i][j] / 5; // 확산될 미세먼지 양 계산.
 				for (int k = 0; k < 4; k++) { // 상하좌우 인접 위치를 확인한다.
 					int nx = i + dx[k], ny = j + dy[k];
-					if (map[nx][ny] == -1) continue; // 인접 위치에 공기 청정기가 있는 경우.
-					if (nx >= r || nx < 0 || ny >= c || ny < 0) continue; // 범위를 벗어난 경우.
+
+					// 인접 위치에 공기 청정기가 있는 경우.
+					if (map[nx][ny] == -1) continue; 
+
+					// 범위를 벗어난 경우.
+					if (nx >= r || nx < 0 || ny >= c || ny < 0) continue; 
 
 					// map을 기준으로 확산여부를 판단하고, 결과반영은 tmpMap에 한다.
 					// 이렇게 하면, map은 바뀌지 않으므로 먼저 확산시킨 먼지의 결과가 
 					// 나중에 확산시킬 먼지의 결과에 영향을 주지 않게할 수 있다.
 
-					tmpMap[nx][ny] += diffuseAmount; // 인접 위치에 미세먼지 확산.
-					tmpMap[i][j] -= diffuseAmount; // 확산 시켰으니까, 현재 위치 미세먼지 감소. 
+					// 인접 위치에 미세먼지 확산.
+					tmpMap[nx][ny] += diffuseAmount; 
+
+					// 확산 시켰으니까, 현재 위치 미세먼지 감소.
+					tmpMap[i][j] -= diffuseAmount;  
 				}
 			}
 		}
 	}
 
-	memcpy(map, tmpMap, sizeof(tmpMap)); // map을 tmpMap으로 교체하여 원본 배열에 시뮬레이션 결과 반영.
+	// map을 tmpMap으로 교체하여 원본 배열에 시뮬레이션 결과 반영.
+	memcpy(map, tmpMap, sizeof(tmpMap)); 
 }
 
 void airConditionerWork() {

@@ -150,19 +150,13 @@
     <ClCompile Include="청소년 상어.cpp">
       <Filter>소스 파일\오늘 푼거</Filter>
     </ClCompile>
-    <ClCompile Include="압축.cpp">
-      <Filter>소스 파일\오늘 푼거</Filter>
-    </ClCompile>
-    <ClCompile Include="17144미세먼지 안녕!.cpp">
-      <Filter>소스 파일\오늘 푼거</Filter>
-    </ClCompile>
-    <ClCompile Include="n 진수 게임,cpp.cpp">
-      <Filter>소스 파일\오늘 푼거</Filter>
-    </ClCompile>
-    <ClCompile Include="11005진법 변환 2.cpp">
-      <Filter>소스 파일\오늘 푼거</Filter>
-    </ClCompile>
     <ClCompile Include="추석 트래픽.cpp">
+      <Filter>소스 파일\오늘 푼거</Filter>
+    </ClCompile>
+    <ClCompile Include="n 진수 게임.cpp">
+      <Filter>소스 파일\오늘 푼거</Filter>
+    </ClCompile>
+    <ClCompile Include="가즈아.cpp">
       <Filter>소스 파일\오늘 푼거</Filter>
     </ClCompile>
   </ItemGroup>
