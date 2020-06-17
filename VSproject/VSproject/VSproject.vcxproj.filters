@@ -156,7 +156,10 @@
     <ClCompile Include="n 진수 게임.cpp">
       <Filter>소스 파일\오늘 푼거</Filter>
     </ClCompile>
-    <ClCompile Include="가즈아.cpp">
+    <ClCompile Include="2753윤년.cpp">
+      <Filter>소스 파일\오늘 푼거</Filter>
+    </ClCompile>
+    <ClCompile Include="셔틀버스.cpp">
       <Filter>소스 파일\오늘 푼거</Filter>
     </ClCompile>
   </ItemGroup>
