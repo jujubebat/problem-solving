@@ -45,9 +45,6 @@
     <ClCompile Include="11561징검다리.cpp">
       <Filter>소스 파일\지옥</Filter>
     </ClCompile>
-    <ClCompile Include="4948 베르트랑 공준.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
     <ClCompile Include="1662압축.cpp">
       <Filter>소스 파일\지옥</Filter>
     </ClCompile>
@@ -105,9 +102,6 @@
     <ClCompile Include="14425문자열 집합.cpp">
       <Filter>소스 파일\최근에 푼거!</Filter>
     </ClCompile>
-    <ClCompile Include="15831준표의 조약돌.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
     <ClCompile Include="가장 긴 증가하는 부분 수열2.cpp">
       <Filter>소스 파일\최근에 푼거!</Filter>
     </ClCompile>
@@ -160,6 +154,9 @@
       <Filter>소스 파일\오늘 푼거</Filter>
     </ClCompile>
     <ClCompile Include="셔틀버스.cpp">
+      <Filter>소스 파일\오늘 푼거</Filter>
+    </ClCompile>
+    <ClCompile Include="ddfsfdfsfd.cpp">
       <Filter>소스 파일\오늘 푼거</Filter>
     </ClCompile>
   </ItemGroup>
