@@ -156,7 +156,16 @@
     <ClCompile Include="셔틀버스.cpp">
       <Filter>소스 파일\오늘 푼거</Filter>
     </ClCompile>
-    <ClCompile Include="ddfsfdfsfd.cpp">
+    <ClCompile Include="1269대칭 차집합.cpp">
+      <Filter>소스 파일\오늘 푼거</Filter>
+    </ClCompile>
+    <ClCompile Include="1977완전제곱수.cpp">
+      <Filter>소스 파일\오늘 푼거</Filter>
+    </ClCompile>
+    <ClCompile Include="2167 2차원 배열의 합.cpp">
+      <Filter>소스 파일\오늘 푼거</Filter>
+    </ClCompile>
+    <ClCompile Include="2960 에라토스테네스의 체.cpp">
       <Filter>소스 파일\오늘 푼거</Filter>
     </ClCompile>
   </ItemGroup>
