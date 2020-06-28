@@ -84,5 +84,11 @@
     <ClCompile Include="124 나라의 숫자.cpp">
       <Filter>소스 파일\코테</Filter>
     </ClCompile>
+    <ClCompile Include="JadenCase 문자열 만들기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="짝지어 제거하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
