@@ -84,5 +84,23 @@
     <ClCompile Include="124 나라의 숫자.cpp">
       <Filter>소스 파일\코테</Filter>
     </ClCompile>
+    <ClCompile Include="3109빵집.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10984내 학점을 구해줘.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="9506약수들의 합.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10409서버.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="5533유니크.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="5618 공약수.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
