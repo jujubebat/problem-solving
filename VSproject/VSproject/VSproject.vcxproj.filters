@@ -84,5 +84,20 @@
     <ClCompile Include="124 나라의 숫자.cpp">
       <Filter>소스 파일\코테</Filter>
     </ClCompile>
+    <ClCompile Include="5575타임카드.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10539수빈이와 수열.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3023마술사 이민혁.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3034앵그리 창영.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="5032탄산음료.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
