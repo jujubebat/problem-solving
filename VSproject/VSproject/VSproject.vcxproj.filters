@@ -84,23 +84,37 @@
     <ClCompile Include="124 나라의 숫자.cpp">
       <Filter>소스 파일\코테</Filter>
     </ClCompile>
-    <ClCompile Include="3109빵집.cpp">
+    <ClCompile Include="5612터널의 입구와 출구.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="10984내 학점을 구해줘.cpp">
+    <ClCompile Include="5576 콘테스트.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="9506약수들의 합.cpp">
+    <ClCompile Include="2804크로스워드 만들기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="10409서버.cpp">
+    <ClCompile Include="2033 반올림.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="5533유니크.cpp">
+    <ClCompile Include="2037문자메세지.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="5618 공약수.cpp">
+    <ClCompile Include="10708크리스마스 파티.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="2810컵홀더.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="5046전국 대학생 프로그래밍 대회 동아리 연합.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2909캔디구매.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="12790 Mini Fantasy War.cpp">
+      <Filter>소스 파일</Filter>
+    </None>
   </ItemGroup>
 </Project>
