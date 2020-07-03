@@ -87,19 +87,19 @@
     <ClCompile Include="3109빵집.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="10984내 학점을 구해줘.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="9506약수들의 합.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="10409서버.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="5533유니크.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="5618 공약수.cpp">
+    <ClCompile Include="8320직사각형을 만드는 방법.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10040투표.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1773폭죽쇼.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2783삼각김밥.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
