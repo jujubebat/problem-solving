@@ -156,7 +156,19 @@
     <ClCompile Include="수식최대화.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="FDSFF.cpp">
+    <ClCompile Include="경주로 건설.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1919애너그램 만들기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="5218알파벳 거리.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1100하얀칸.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10769행복한지 슬픈지.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

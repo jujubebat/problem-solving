@@ -289,7 +289,7 @@ void bfs() {
 	
 		if (x == n - 1 && y == m - 1) {
 
-			ret = min(ret, (visited[x][y][c]-1)*100 + c*500);
+			ret = min(ret, (visited[x][y][c]-1)*100 + c*600);
 		}
 
 		for (int i = 0; i < 4; i++) {
