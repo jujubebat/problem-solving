@@ -171,6 +171,15 @@
     <ClCompile Include="10769행복한지 슬픈지.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1822차집합.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="tmp.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="19238스타트 택시.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="12790 Mini Fantasy War.cpp">
