@@ -180,6 +180,12 @@
     <ClCompile Include="19238스타트 택시.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1631역사[실패].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="11725트리의 부모 찾기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="12790 Mini Fantasy War.cpp">

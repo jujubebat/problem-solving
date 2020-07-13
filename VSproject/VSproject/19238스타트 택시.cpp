@@ -1,149 +1,155 @@
 #include<iostream>
+#include<unordered_map>
 #include<queue>
 #include<cstring>
-#include<unordered_map>
 #include<algorithm>
 using namespace std;
 
 typedef struct {
-	int x, y, f, c;
+	int x, y, f;
 }pos;
 
-int n, m, fuel;
+int n, m, fuel, tx, ty;
 int map[20][20];
-int personMap[20][20]; // 손님 위치 좌표
-int tx, ty;
-const int dx[] = { -1,0,1,0 }, dy[] = { 0,-1,0,1 };
-int succes = 0;
+int clientMap[20][20];
 unordered_map<int, pair<int, int>> destInfo;
+const int dx[] = { -1,1,0,0 }, dy[] = { 0,0,-1,1 };
 
+// 최단거리가 같은 손님이 여러명일 경우 아래 기준으로 sort 하면된다.
 bool comp(pos a, pos b) {
 	if (a.f == b.f) {
 		if (a.x == b.x) {
-			return a.y < b.y;
+			return a.y < b.y; // 열번호가 적은순으로
 		}
 		else
-			return a.x < b.x;
+			return a.x < b.x; // 행번호가 적은순으로
 	}
 	else
-		return a.f > b.f;
+		return a.f > b.f; // 연료가 많은순으로(거리가 가까운순으로)
 }
 
-bool goToDest(int destNum) {  // 연료 떨어지면 false 리턴
-	int check[20][20];
-	int cnt = 0;
-	memset(check, 0, sizeof(check));
+// 손님을 목적지(=destNum)에 데려다주는 bfs 
+bool goToDest(int destNum) {
 	queue<pos> q;
-	q.push({ tx,ty, fuel, 0 });
-	check[tx][ty] = 1;
+	bool check[20][20];
+	int maxVal = -0x7fffffff; 
+	vector<pos> candi;
+
+	memset(check, 0, sizeof(check));
+	q.push({ tx,ty,fuel });
 
 	while (!q.empty()) {
 		int x = q.front().x, y = q.front().y,
-			f = q.front().f, c = q.front().c;
+			f = q.front().f;
 		q.pop();
 
+		// 도착지라면
 		if (destInfo[destNum].first == x
-			&& destInfo[destNum].second == y) {// 손님을 성공적으로 배달.
-			
-			tx = x, ty = y;
-			f += c * 2; // 소모한 연료의 2배 충전.
-			fuel = f;
-
+			&& destInfo[destNum].second == y) {
+			// 택시 위치, 연료 정보 업데이트
+			tx = x, ty = y, fuel = f + (fuel - f) * 2; // 소모한 연료의 2배 추가.
 			return true;
 		}
 
+		if (f == 0) continue; // 연료가 0일 경우
+
 		for (int i = 0; i < 4; i++) {
-			int nx = x + dx[i], ny = y + dy[i], nf = f, nc = c;
+			int nx = x + dx[i], ny = y + dy[i];
+			int nf = f;
 			if (nx >= n || nx < 0 || ny >= n || ny < 0) continue;
 			if (map[nx][ny]) continue;
 			if (check[nx][ny]) continue;
-			if (nf == 0) continue;
-			nf--;
-			nc++; // 연료 소모량 체크
-			check[nx][ny] = 1;
-			q.push({ nx, ny, nf, nc });
+
+			nf--; // 연료 감소
+			check[nx][ny] = true;
+			q.push({ nx, ny, nf });
 		}
+
 	}
 
 	return false;
 }
 
-bool ridePerson() { // 연료 떨어지면 false 리턴
-	int destNum = -1;
-	int check[20][20];
-	memset(check, 0, sizeof(check));
+bool rideClient() { // 최단거리에 있는 손님들 태우러가는 bfs 함수
 	queue<pos> q;
-	q.push({ tx,ty,fuel });
-	check[tx][ty] = 1;
-
-	vector<pos> candi;
+	bool check[20][20];
 	int maxVal = -0x7fffffff;
+	vector<pos> candi;
+
+	memset(check, 0, sizeof(check));
+	q.push({ tx,ty,fuel });
 
 	while (!q.empty()) {
-		int x = q.front().x, y = q.front().y, f = q.front().f;
+		int x = q.front().x, y = q.front().y,
+			f = q.front().f;
 		q.pop();
 
-		if (personMap[x][y] > 0) { // 손님을 발견하면 종료.
-			if (maxVal <= f) {
-				maxVal = f;
-				candi.push_back({ x, y, f });
+		if (f == 0) continue; // 연료가 0일 경우
+
+		if (clientMap[x][y] > 0) {
+			if (f >= maxVal) { // v연료를 덜 소모해야 가까운 곳이다.
+				candi.push_back({ x,y,f }); // 손님 후보군을 넣는다.
 			}
 			continue;
 		}
 
 		for (int i = 0; i < 4; i++) {
-			int nx = x + dx[i], ny = y + dy[i], nf = f;
+			int nx = x + dx[i], ny = y + dy[i];
+			int nf = f;
 			if (nx >= n || nx < 0 || ny >= n || ny < 0) continue;
 			if (map[nx][ny]) continue;
 			if (check[nx][ny]) continue;
-			if (nf == 0) continue;
-			nf--;
+			nf--; // 연료 감소
 			check[nx][ny] = true;
-			q.push({ nx, ny, nf });
+			q.push({ nx,ny, nf });
 		}
+
 	}
 
-	if (candi.size() == 0) return false; // 손님을 발견 못할경우.
+	if (candi.size() == 0) // 손님 후보군이 없다면
+		return false;
 
+	// 정렬을 사용해 행, 열이 적은 손님을 찾는다.
 	sort(candi.begin(), candi.end(), comp);
 
 	int x = candi[0].x, y = candi[0].y, f = candi[0].f;
-	destNum = personMap[x][y];
-	tx = x, ty = y;
-	personMap[x][y] = 0;
-	fuel = f;
+	int destNum = clientMap[x][y];
+	clientMap[x][y] = 0; // clientMap 정보 업데이트
+	tx = x, ty = y, fuel = f; // 택시 정보 업데이트
 
-	return goToDest(destNum); // 손님을 태우고 목적지로 출발.
+	return goToDest(destNum); // 태울 손님 번호(=목적지 번호)를 넣는다.
 }
 
 int solve() {
 	for (int i = 0; i < m; i++) {
-		if (ridePerson() == false) {
+		if (!rideClient())
 			return -1;
-		}
 	}
+
 	return fuel;
 }
 
 int main() {
+
 	cin >> n >> m >> fuel;
 
-	for (int i = 0; i < n; i++) {
+	for (int i = 0; i < n; i++) { // map 정보를 입력받는다. 
 		for (int j = 0; j < n; j++) {
 			cin >> map[i][j];
 		}
 	}
 
-	cin >> tx >> ty;
+	cin >> tx >> ty; // 택시 정보 입력
 	tx--, ty--;
 
 	for (int i = 1; i <= m; i++) {
 		int sx, sy, ex, ey;
 		cin >> sx >> sy >> ex >> ey;
-		personMap[sx - 1][sy - 1] = i;
-		destInfo[i] = { ex - 1 , ey - 1 };
+		clientMap[sx - 1][sy - 1] = i; // 손님 위치 정보를 2차원 배열로 관리
+		destInfo[i] = { ex - 1, ey - 1 }; // 손님의 도착지 정보를 hash map으로 관리
 	}
 
 	cout << solve();
+
 	return 0;
 }
