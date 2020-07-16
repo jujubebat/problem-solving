@@ -111,70 +111,13 @@
     <ClCompile Include="2909캔디구매.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="3054피터팬 프레임.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="1713후보 추천하기.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="9324진짜 메세지.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2827 우리집엔 도서관이 있어.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="5893 17배.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="1620나는야 포켓몬 마스터 이다솜.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="가단조와 다장조.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1371가장 많은 글자.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1296데이트.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="10987모음의 개수.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="1032명령 프롬프트.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="9933민균이의 비밀번호.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2789 유학금지.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="보석쇼핑.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="수식최대화.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="경주로 건설.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="1919애너그램 만들기.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="5218알파벳 거리.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="1100하얀칸.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="10769행복한지 슬픈지.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="1822차집합.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="tmp.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="19238스타트 택시.cpp">
@@ -183,7 +126,16 @@
     <ClCompile Include="1631역사[실패].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="11725트리의 부모 찾기.cpp">
+    <ClCompile Include="17087숨바꼭질6.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="키패드 누르기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="예산.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="17406배열 돌리기4.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
