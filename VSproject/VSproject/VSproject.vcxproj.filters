@@ -138,6 +138,12 @@
     <ClCompile Include="17406배열 돌리기4.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="19237어른상어.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="tmp memo.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="12790 Mini Fantasy War.cpp">

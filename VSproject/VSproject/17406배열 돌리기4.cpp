@@ -27,22 +27,22 @@ void rotate(rotationInfo info) {
 	int sx = r - s - 1, sy = c - s -1;
 
 	while (cnt--) {
-		// 위쪽 행 
+		// 위쪽 행  →
 		for (int col = sy; col < sy + len - 1; col++) {
 			tmpMap[sx][col + 1] = tmp[sx][col];
 		}
 
-		// 오른쪽 열 
+		// 오른쪽 열 ↓
 		for (int row = sx; row < sx + len - 1; row++) {
 			tmpMap[row + 1][sy + len - 1] = tmp[row][sy + len - 1];
 		}
 	
-		// 아래쪽 행
+		// 아래쪽 행  ←
 		for (int col = sy + len - 1; col > sy; col--) {
 			tmpMap[sx + len - 1][col-1] = tmp[sx+len - 1][col];
 		}
 
-		// 왼쪽 열
+		// 왼쪽 열 ↑
 		for (int row = sx + len - 1; row > sx; row--) {
 			tmpMap[row - 1][sy] = tmp[row][sy];
 		}
