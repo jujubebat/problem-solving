@@ -1,3 +1,107 @@
+// 두번째 풀이
+#include<iostream>
+#include<map>
+#include<algorithm>
+#include<cstring>
+using namespace std;
+
+const int dx[] = { -1,-1,0,1,1,1,0,-1 }, dy[] = { 0,-1,-1,-1,0,1,1,1 };
+
+typedef struct {
+	int x, y;
+	int dir;
+}fish;
+
+int ret = 0;
+
+void solve(map<int, fish>fishInfo, fish sharkInfo, int score, int fishMap[][4]) {
+	// 물고기 이동
+	for (auto f : fishInfo) {
+		int fishNum = f.first;
+		int x = f.second.x, y = f.second.y, dir = f.second.dir;
+
+		for (int i = dir; i < dir + 8; i++) {
+			int nx = x + dx[i % 8], ny = y + dy[i % 8];
+			if (nx >= 4 || nx < 0 || ny >= 4 || ny < 0) continue;
+			if (fishMap[nx][ny] == -1) continue;
+
+			if (fishMap[nx][ny] == 0) {
+				fishMap[nx][ny] = fishNum;
+				fishMap[x][y] = 0;
+				fishInfo[fishNum].x = nx;
+				fishInfo[fishNum].y = ny;
+				fishInfo[fishNum].dir = i % 8;
+			}
+			else {
+				fishInfo[fishNum].x = nx;
+				fishInfo[fishNum].y = ny;
+				fishInfo[fishNum].dir = i % 8;
+
+				fishInfo[fishMap[nx][ny]].x = x;
+				fishInfo[fishMap[nx][ny]].y = y;
+
+				swap(fishMap[x][y], fishMap[nx][ny]);
+			}
+			break;
+		}
+	}
+
+	// 상어 이동
+	int x = sharkInfo.x, y = sharkInfo.y, dir = sharkInfo.dir;
+
+	for (int i = 1; i <= 3; i++) {
+		int nx = x + dx[dir] * i;
+		int ny = y + dy[dir] * i;
+		if (nx >= 4 || nx < 0 || ny >= 4 || ny < 0) break;
+		if (fishMap[nx][ny] <= 0) continue;
+
+		int feedFish = fishMap[nx][ny];
+		map<int, fish>next_fishInfo = fishInfo;
+		int next_fishMap[4][4];
+		int ndir = next_fishInfo[feedFish].dir;
+
+		next_fishInfo.erase(feedFish);
+		memcpy(next_fishMap, fishMap, sizeof(next_fishMap));
+		next_fishMap[x][y] = 0;
+		next_fishMap[nx][ny] = -1;
+
+		solve(next_fishInfo, { nx, ny, ndir }, score + feedFish, next_fishMap);
+	}
+
+	ret = max(ret, score);
+}
+
+int main() {
+	int fishMap[4][4];
+	map<int, fish>fishInfo;
+	fish sharkInfo;
+	int score = 0;
+
+	for (int r = 0; r < 4; r++) {
+		for (int c = 0; c < 4; c++) {
+			int a, b;
+			cin >> a >> b;
+
+			if (r == 0 && c == 0) {
+				sharkInfo = { 0, 0, b - 1 };
+				fishMap[r][c] = -1;
+				score += a;
+			}
+			else {
+				fishInfo[a] = { r, c, b - 1 };
+				fishMap[r][c] = a;
+			}
+		}
+	}
+
+	solve(fishInfo, sharkInfo, score, fishMap);
+
+	cout << ret;
+	return 0;
+}
+
+// 첫번째 풀이 
+/*
 #include<iostream>
 #include<vector>
 #include<algorithm>
@@ -92,3 +196,4 @@ int main() {
 
 	return 0;
 }
+*/

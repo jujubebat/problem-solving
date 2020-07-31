@@ -19,6 +19,9 @@
     <Filter Include="소스 파일\코테">
       <UniqueIdentifier>{2709f3ad-6fb0-496d-a441-1eb2106f449f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\오늘푼거">
+      <UniqueIdentifier>{ae8892c3-3acc-413c-8dd9-218da433ec72}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2776암기왕.cpp">
@@ -143,6 +146,21 @@
     </ClCompile>
     <ClCompile Include="tmp memo.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1543문서 검색.cpp">
+      <Filter>소스 파일\오늘푼거</Filter>
+    </ClCompile>
+    <ClCompile Include="9996번 한국이 그리울 떈 서버에 접속하지.cpp">
+      <Filter>소스 파일\오늘푼거</Filter>
+    </ClCompile>
+    <ClCompile Include="가장 긴 펠린드롬.cpp">
+      <Filter>소스 파일\오늘푼거</Filter>
+    </ClCompile>
+    <ClCompile Include="자동완성.cpp">
+      <Filter>소스 파일\오늘푼거</Filter>
+    </ClCompile>
+    <ClCompile Include="메모지.cpp">
+      <Filter>소스 파일\오늘푼거</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
