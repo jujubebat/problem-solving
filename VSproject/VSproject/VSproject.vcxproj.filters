@@ -16,156 +16,49 @@
     <Filter Include="소스 파일\최근에 푼거!">
       <UniqueIdentifier>{4d00a3f9-7d2e-4f68-bf20-dcecf0625f28}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\코테">
-      <UniqueIdentifier>{2709f3ad-6fb0-496d-a441-1eb2106f449f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\오늘푼거">
       <UniqueIdentifier>{ae8892c3-3acc-413c-8dd9-218da433ec72}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\코테기록">
+      <UniqueIdentifier>{2709f3ad-6fb0-496d-a441-1eb2106f449f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="2776암기왕.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
     <ClCompile Include="가장 긴 증가하는 부분 수열2.cpp">
       <Filter>소스 파일\최근에 푼거!</Filter>
     </ClCompile>
     <ClCompile Include="1790 수 이어 쓰기2.cpp">
       <Filter>소스 파일\최근에 푼거!</Filter>
     </ClCompile>
-    <ClCompile Include="2138전구와 스위치.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="2343기타레슨.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="2792보석상자.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="3079입국심사.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="3671산업 스파이의 편지.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="6236공유기 설치.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="6236용돈관리.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="15810풍선 공장.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="16401과자 나눠주기.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="16935배열 돌리기3.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="자물쇠와 열쇠.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="카카오 인턴 코테.cpp">
-      <Filter>소스 파일\코테</Filter>
-    </ClCompile>
-    <ClCompile Include="n 진수 게임.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="1009 분산처리.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="1138한 줄로 서기.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="10988펠린드롬인지 확인하기.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="징검다리 건너기.cpp">
-      <Filter>소스 파일\최근에 푼거!</Filter>
-    </ClCompile>
-    <ClCompile Include="124 나라의 숫자.cpp">
-      <Filter>소스 파일\코테</Filter>
-    </ClCompile>
-    <ClCompile Include="5612터널의 입구와 출구.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="5576 콘테스트.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2804크로스워드 만들기.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2033 반올림.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2037문자메세지.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="10708크리스마스 파티.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2810컵홀더.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="5046전국 대학생 프로그래밍 대회 동아리 연합.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2909캔디구매.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="가단조와 다장조.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="1371가장 많은 글자.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="10987모음의 개수.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="19238스타트 택시.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="1631역사[실패].cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="17087숨바꼭질6.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="키패드 누르기.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="예산.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="17406배열 돌리기4.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="19237어른상어.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="tmp memo.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="1543문서 검색.cpp">
-      <Filter>소스 파일\오늘푼거</Filter>
+      <Filter>소스 파일\최근에 푼거!</Filter>
     </ClCompile>
     <ClCompile Include="9996번 한국이 그리울 떈 서버에 접속하지.cpp">
-      <Filter>소스 파일\오늘푼거</Filter>
+      <Filter>소스 파일\최근에 푼거!</Filter>
     </ClCompile>
     <ClCompile Include="가장 긴 펠린드롬.cpp">
-      <Filter>소스 파일\오늘푼거</Filter>
+      <Filter>소스 파일\최근에 푼거!</Filter>
     </ClCompile>
     <ClCompile Include="자동완성.cpp">
+      <Filter>소스 파일\최근에 푼거!</Filter>
+    </ClCompile>
+    <ClCompile Include="2020 상반기 여름 카카오 인턴 코테.cpp">
+      <Filter>소스 파일\코테기록</Filter>
+    </ClCompile>
+    <ClCompile Include="124 나라의 숫자.cpp">
+      <Filter>소스 파일\최근에 푼거!</Filter>
+    </ClCompile>
+    <ClCompile Include="1631역사[실패].cpp">
+      <Filter>소스 파일\최근에 푼거!</Filter>
+    </ClCompile>
+    <ClCompile Include="1371가장 많은 글자.cpp">
+      <Filter>소스 파일\최근에 푼거!</Filter>
+    </ClCompile>
+    <ClCompile Include="3986좋은단어.cpp">
       <Filter>소스 파일\오늘푼거</Filter>
     </ClCompile>
-    <ClCompile Include="메모지.cpp">
+    <ClCompile Include="2504 괄호의값(다시풀기).cpp">
       <Filter>소스 파일\오늘푼거</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="12790 Mini Fantasy War.cpp">
-      <Filter>소스 파일</Filter>
-    </None>
   </ItemGroup>
 </Project>

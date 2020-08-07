@@ -23,6 +23,7 @@ int main() {
 		}
 	}
 
+
 	if (ga > da) {
 		cout << "A-minor";
 	}
