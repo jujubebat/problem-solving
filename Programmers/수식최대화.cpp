@@ -1,3 +1,75 @@
+
+/*
+// [20/08/26]
+
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <iostream>
+#include <set>
+using namespace std;
+
+vector<char> operPriority;
+set<char> s;
+
+long long cal(vector<long long> numbers, vector<char> operations) {
+
+	for (char operation : operPriority) {
+		for (int i = 0; i < operations.size(); i++) {
+			if (operations[i] == operation) {
+				if (operation == '+') {
+					numbers[i + 1] = numbers[i] + numbers[i + 1];
+				}
+				else if (operation == '-') {
+					numbers[i + 1] = numbers[i] - numbers[i + 1];
+				}
+				else if (operation == '*') {
+					numbers[i + 1] = numbers[i] * numbers[i + 1];
+				}
+				numbers.erase(numbers.begin() + i);
+				operations.erase(operations.begin() + i);
+				i--;
+			}
+		}
+	}
+
+	return abs(numbers[0]);
+}
+
+long long solution(string expression) {
+	vector<long long> numbers;
+	vector<char> operations;
+	long long answer = 0;
+
+	string tmp = "";
+	for (int i = 0; i < expression.size(); i++) {
+		if (expression[i] == '+'
+			|| expression[i] == '-'
+			|| expression[i] == '*') {
+			if (!s.count(expression[i])) {
+				s.insert(expression[i]);
+				operPriority.push_back(expression[i]);
+			}
+			operations.push_back(expression[i]);
+			numbers.push_back(stoi(tmp));
+			tmp = "";
+		}
+		else
+			tmp += expression[i];
+	}
+
+	numbers.push_back(stoi(tmp));
+	sort(operPriority.begin(), operPriority.end());
+
+	do {
+		answer = max(answer, cal(numbers, operations));
+	} while (next_permutation(operPriority.begin(), operPriority.end()));
+
+	return answer;
+}
+
+*/
+
 #include <string>
 #include <vector>
 #include <algorithm>

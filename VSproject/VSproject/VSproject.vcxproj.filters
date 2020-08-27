@@ -54,10 +54,19 @@
     <ClCompile Include="1371가장 많은 글자.cpp">
       <Filter>소스 파일\최근에 푼거!</Filter>
     </ClCompile>
+    <ClCompile Include="쏘카코테.cpp">
+      <Filter>소스 파일\코테기록</Filter>
+    </ClCompile>
     <ClCompile Include="3986좋은단어.cpp">
-      <Filter>소스 파일\오늘푼거</Filter>
+      <Filter>소스 파일\최근에 푼거!</Filter>
+    </ClCompile>
+    <ClCompile Include="외벽점검.cpp">
+      <Filter>소스 파일\최근에 푼거!</Filter>
     </ClCompile>
     <ClCompile Include="2504 괄호의값(다시풀기).cpp">
+      <Filter>소스 파일\오늘푼거</Filter>
+    </ClCompile>
+    <ClCompile Include="1302베스트셀러.cpp">
       <Filter>소스 파일\오늘푼거</Filter>
     </ClCompile>
   </ItemGroup>

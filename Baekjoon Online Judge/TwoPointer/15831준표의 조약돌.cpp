@@ -1,3 +1,53 @@
+/*
+[20/08/27]
+
+#include<iostream>
+#include<string>
+#include<algorithm>
+using namespace std;
+
+int main() {
+	int ret = 0;
+	int n, b, w;
+	string str;
+
+	cin >> n >> b >> w;
+	cin >> str;
+
+	int start = 0, end = 0;
+	int bCnt = 0, wCnt = 0;
+
+	while (1) {
+		if (bCnt <= b && wCnt >= w) {
+			ret = max(ret, end - start);
+			if (str[end] == 'B')
+				bCnt++;
+			else if (str[end] == 'W')
+				wCnt++;
+			end++;
+		}
+		else if (bCnt > b) {
+			if (str[start] == 'B')
+				bCnt--;
+			else if (str[start] == 'W')
+				wCnt--;
+			start++;
+		}
+		else if (wCnt < w) {
+			if (str[end] == 'B')
+				bCnt++;
+			else if (str[end] == 'W')
+				wCnt++;
+			end++;
+		}
+		if (end > n) break;
+	}
+
+	cout << ret;
+	return 0;
+}
+*/
+
 #include<iostream>
 #include<algorithm>
 using namespace std;
